@@ -28,6 +28,10 @@ export default class MessagesIndex extends Component {
         <ReactTable
           data={data}
           filterable={true}
+          defaultFilterMethod={(filter, row, column) => {
+            const id = filter.pivotId || filter.id
+            return row[id] !== undefined ? String(row[id].toLowerCase()).startsWith(filter.value.toLowerCase()) : true
+          }}
           columns={[
             {
               Header: 'Contact Info',
