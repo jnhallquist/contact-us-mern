@@ -100,6 +100,11 @@ export default class MessageForm extends Component {
           </Alert>
         }
         <Form horizontal onSubmit={this.handleSubmit}>
+          <FormGroup>
+            <Col smOffset={2} sm={2}>
+              <h3>Contact Form</h3>
+            </Col>
+          </FormGroup>
           <FormGroup controlId='firstName'>
             <Col componentClass={ControlLabel} sm={2}>
               Name
