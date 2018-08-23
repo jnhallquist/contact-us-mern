@@ -11,7 +11,7 @@ Users may also view the Message History table and use the provided sorting/filte
 ### Setup
 1. Clone repo
 2. `cd` into cloned repo
-3. Install packages in root, api, and client directories using following commands:
+3. Run the following commands:
     * `npm install`
     * `npm run post:install`
 4. Sendgrid setup
