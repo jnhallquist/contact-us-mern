@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:server": "cd contact-us-api && npm run start",
     "start:client": "cd contact-us-client && npm run start",
-    "start:dev": "concurrently \"npm:start:server\" \"npm:start:client\"",
-    "db:seed": "cd contact-us-api && seed",
-    "postinstall": "(cd contact-us-api && npm install); (cd contact-us-client && npm install);"
+    "start:dev": "./node_modules/concurrently/src/main.js \"npm:start:server\" \"npm:start:client\"",
+    "db:seed": "cd contact-us-api && ../node_modules/node-mongo-seeds/bin/seed",
+    "post:install": "(cd contact-us-api && npm install); (cd contact-us-client && npm install);"
   },
   "author": "Jennifer Hallquist",
   "license": "ISC",
@@ -19,6 +19,10 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "node-mongo-seeds": "^3.1.0"
+  },
+  "dependencies": {
+    "concurrently": "^3.6.1"
   }
 }
