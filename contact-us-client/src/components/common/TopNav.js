@@ -8,13 +8,9 @@ const TopNav = () => (
         <a href='/'><Glyphicon glyph='home' /></a>
       </Navbar.Brand>
     </Navbar.Header>
-    <Nav>
+    <Nav pullRight>
       <NavItem href='/contactUs'>Contact Us</NavItem>
       <NavItem href='/messageHistory'>Message History</NavItem>
-    </Nav>
-    <Nav pullRight>
-      <NavItem href='/'>Sign Up</NavItem>
-      <NavItem href='/'>Login</NavItem>
     </Nav>
   </Navbar>
 );
